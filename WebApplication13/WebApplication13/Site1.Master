@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication13.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+     <style> 
+          nav { 
+              border:1px; 
+              background-color:#090; 
+              color:white; 
+              padding:6px; 
+          } 
+          a { 
+              text-decoration:none; 
+              color:white; 
+              font-size:20px; 
+          } 
+          .gfg { 
+              font-size:40px; 
+              color:#090; 
+              font-weight:bold; 
+              text-align:center; 
+          } 
+          .nav_tag { 
+              text-align:center; 
+              margin:30px 0; 
+          } 
+		  input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type=text]:focus {
+  width: 100%;
+}
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+      </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <div class = "gfg"><img src="logo.jpg"></div> 
+	  <input type="text" name="search" placeholder="Search..">
+      <nav> 
+         <a>Home</a> | 
+         <a>Login</a> | 
+		 <a>New User</a> | 
+         <a>Contact Us</a> | 
+         <a>Terms of Use</a> | 
+         <a>Privacy Policy</a>  
+      </nav> 
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+     <div class="navbar">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+         </div>
+</body>
+</html>
